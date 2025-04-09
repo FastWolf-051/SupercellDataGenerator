@@ -54,9 +54,9 @@
  
  for (int i = 0; i < longestArraySize; i++) {
  	if (longestArraySize > 0) {
-		int dps = _row.GetClampedIntegetValue("Damage", i);
+	        int dps = _row.GetClampedIntegetValue("Damage", i);
 		
- 		_damage.Add(LogicGamePlayUtil.DPSToSingleHit(dps, 1000);
+                _damage.Add(LogicGamePlayUtil.DPSToSingleHit(dps, 1000);
 	}
  }
  ```
