@@ -5,15 +5,45 @@
  brain, IDA
 
 # How to use
- Install net8.0 (if you don't have it now), run the Program.cs
- 
-# How this works
+ Install net8.0 (if you don't have it now), run the Program.cs, build executable
+ Create an file, that contains all of your types, and names
+ This file should look like this:
+ ```
+ string
+ characterType
+
+ List<LogicAnimationData>
+ winAnimation
+
+ List<LogicAnimationData>
+ loseAnimation
+
+ List<LogicCharacterData>
+ character
+
+ int
+ animationLength
+
+ string
+ animationType
+ ```
+
+ NOTICE: put that file in samefolder with executable
+
+ Then open command prompt, and run my tool using this:
+  SCDataGenerator --game coc --file <file> --class <class_name> --base <base_name>
+ Example:
+ SCDataGenerator --game coc --file ToParse.txt --class LogicCharacterData --base LogicCombatItemData
+
+ And after it in your folder (same as executable) appears file with your generated data (name of it are Logic....Data.generated.cs)
+
+# About
  The Supercell company have an Data classes in their games, like Brawl stars.
  Those classes are needed for getting information from different CSV classes.
  The process of writing those are really routine, due of amount of similar code.
  That's why i decided to write this tool
 
-# Usage
+# Explantation of types
  The structure of Data classes is like this:
  ```cpp
   v7 = (CSVRow *)*((_DWORD *)this + 1);

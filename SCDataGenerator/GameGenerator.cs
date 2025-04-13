@@ -47,7 +47,7 @@ namespace SCDataGenerator {
         }
 
         public static void SaveOutput(string className, string data) {
-            FileStream? stream = new(className + ".cs", FileMode.OpenOrCreate);
+            FileStream? stream = new(className + ".generated.cs", FileMode.OpenOrCreate);
 
             stream.Write(Encoding.Default.GetBytes(data), 0, data.Length);
             stream.Close();

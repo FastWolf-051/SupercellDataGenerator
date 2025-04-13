@@ -43,7 +43,7 @@ namespace SCDataGenerator{
                 cocGenerator.Generate();
                 cocGenerator.SaveOutput();
 
-                Console.WriteLine($"\nOutput was written to {mainClass}.cs sucsessfully\n");
+                Console.WriteLine($"\nOutput was written to {mainClass}.generated.cs sucsessfully\n");
             }
 
             else if (args.Length == 1 && args[0] == "--notice") {
